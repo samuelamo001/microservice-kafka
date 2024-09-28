@@ -17,6 +17,6 @@ public class StudentController {
     @PostMapping()
     public ResponseEntity<String> sendStudentDataToProducer(@RequestBody Student student) {
         studentProducer.produceStudent(student);
-        return ResponseEntity.ok("Student data queued successfully");
+        return ResponseEntity.ok("Student data send to topic successfully");
     }
 }
